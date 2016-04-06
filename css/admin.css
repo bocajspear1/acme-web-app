@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body, html {
+	min-height:100%;
+	margin:0px;
+	padding: 0px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+div {
+	overflow: auto;
+}
+
+a {
+	color:blue;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#login-screen {
+	width: 20%;
+	border: 1px solid black;
+	border-radius: 15px;
+	padding: 15px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 15%;
+	text-align:center;
+}
+
+#error-message {
+	color: red;
+	
+}
+
+#sidebar {
+	width: 200px;
+	box-sizing: border-box;
+	position: absolute;
+	padding: 10px;
+	padding-top: 20px;
+}
+
+#sidebar ul {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+
+#sidebar ul li {
+	border-bottom: 1px solid black;
+}
+
+#sidebar ul li a {
+	display:block;
+	padding: 5px;
+}
+
+#main {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 15px;
+	display: inline-block;
+	padding-left: 200px;
+}
+
+#tool-list {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+
+#tool-list li {
+	padding: 7px;
+	float:left;
+}
+
