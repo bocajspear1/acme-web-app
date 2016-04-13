@@ -27,6 +27,9 @@ header ul {
 	list-style: none;
 	padding:0px;
 	margin:0px;
+  width:100%;
+  background-color:#576C54;
+  overflow:auto;
 }
 
 header ul li {
@@ -35,8 +38,14 @@ header ul li {
 
 header ul li a {
 	display:block;
+  padding:5px;
 	padding-left: 10px;
 	padding-right: 10px;
+  color:white;
+}
+
+header ul li:hover a {
+   box-shadow: 1px 1px 2px #1D241B;
 }
 
 main {
@@ -55,6 +64,21 @@ footer {
 #comment-box {
 	width: 500px;
 	height: 300px;
+}
+
+#front {
+  width:85%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  background-color: #F6F6F6;
+  box-shadow: 2px 2px 2px #B0B0B0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#front h1 {
+  text-shadow: 2px 2px #DBd8d8;
 }
 
 .product {

@@ -4,7 +4,7 @@ if(!defined('INCLUDED')){ die(); }
 
 
 ?>
-<div>
+<div id="command-list">
 	<ul id="tool-list">
 		<li><a href="/admin.php?p=tools&tool=df">Disk Usage</a></li>
 		<li><a href="/admin.php?p=tools&tool=free">Memory Usage</a></li>
@@ -12,7 +12,7 @@ if(!defined('INCLUDED')){ die(); }
 	</ul>
 </div>
 
-<div>
+<div id="command-output">
 
 <?php
 if (array_key_exists('tool', $_GET) ){
