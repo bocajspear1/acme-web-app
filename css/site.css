@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 
 @font-face {
     font-family: Papyrus;
@@ -21,6 +22,12 @@ a {
 header {
 	width:100%;
 	overflow:auto;
+}
+
+header h1 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  display:block;
+  padding-left: 15px;
 }
 
 header ul {
