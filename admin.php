@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 
 <head>
@@ -15,14 +16,13 @@
 
 <body>
 <header>
-	
+
 </header>
 
 <?php
 
 include("./config.php");
 
-session_start();
 
 $mysqli = new mysqli("localhost", $CONFIG['database_user'], $CONFIG['database_password'], "hackathon");
 
@@ -33,10 +33,10 @@ if ($mysqli->connect_errno) {
 $error_message = "";
 
 if (array_key_exists('username', $_POST) && array_key_exists('password', $_POST)) {
-	
+
 	$username = $_POST['username'];
 	$password = md5($_POST['password']);
-	
+
 	// Stop SQL injection
 	$username = str_replace("'", "\'", $username);
 	$username = str_replace('"', '\"', $username);
@@ -44,13 +44,13 @@ if (array_key_exists('username', $_POST) && array_key_exists('password', $_POST)
 	$query = "SELECT * FROM users WHERE username='" . $username . "' AND password='" . $password . "'";
 
 	$result = $mysqli->query($query);
-	
+
 	if (!$result) {
 		 echo "Failed to query: (" . $mysqli->errno . ") " . $mysqli->error;
 	}
-	
-	
-	
+
+
+
 	if ($result->num_rows > 0) {
 		$_SESSION['logged_in'] = true;
 		$_SESSION['user'] = $username;
@@ -63,7 +63,7 @@ if (array_key_exists('username', $_POST) && array_key_exists('password', $_POST)
 		$_SESSION['logged_in'] = true;
 		$_SESSION['user'] = $username;
 	}
-	
+
 }
 
 if (!$mysqli->connect_errno) {
@@ -76,34 +76,34 @@ define('INCLUDED', true);
 
 <?php
 /*
- * 
- * 
+ *
+ *
  */
 //~ print_r( $_GET);
 
 
 if (!array_key_exists('logged_in', $_SESSION) || (array_key_exists('logged_in', $_SESSION) && $_SESSION['logged_in'] == false)) : ?>
 <div id="login-screen">
-	Login: 
+	Login:
 	<form method="post" action="/admin.php">
 		<table>
 			<tr><td>Username: </td><td><input type="text" name="username"></td></tr>
 			<tr><td>Password: </td><td><input type="password" name="password"></td></tr>
 		</table>
 		<input type="submit" value="Log In">
-		
-		
-		<?php 
+
+
+		<?php
 		if ($error_message!="") {
 			echo "<div id='error-message'>" . $error_message . "</div>";
-		} 
+		}
 		?>
-		
-		
+
+
 	</form>
 </div>
 <?php else : ?>
-	
+
 	<main>
 		<section id="sidebar">
 			<ul>
@@ -132,8 +132,8 @@ if (!array_key_exists('logged_in', $_SESSION) || (array_key_exists('logged_in', 
 <?php endif; ?>
 
 <footer>
-	
-	
+
+
 </footer>
 </body>
 

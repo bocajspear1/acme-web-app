@@ -1,10 +1,16 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
-
 @font-face {
     font-family: Papyrus;
     src: url(../papyrus.ttf);
 }
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../opensans.ttf);
+}
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url(../opensans-cond.ttf);
+}
+
 
 body, html {
 	height:100%;
