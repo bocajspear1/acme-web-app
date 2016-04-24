@@ -4,6 +4,8 @@ This is a vulnerable web application made for the 2016 CNY Hackathon. It's writt
 
 DON'T USE THIS IN A PRODUCTION ENVIRONMENT!
 
+The operational state can be tested using the ```test.php``` file.
+
 ## Requirements
 
 Needs the PHP ```mysqli``` library.
