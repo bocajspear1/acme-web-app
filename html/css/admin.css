@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Open Sans';
-    src: url(../opensans.ttf);
+    src: url(/fonts/opensans.ttf);
 }
 body, html {
 	min-height:100%;

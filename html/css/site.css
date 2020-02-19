@@ -1,14 +1,14 @@
 @font-face {
     font-family: Papyrus;
-    src: url(../papyrus.ttf);
+    src: url(/fonts/papyrus.ttf);
 }
 @font-face {
     font-family: 'Open Sans';
-    src: url(../opensans.ttf);
+    src: url(/fonts/opensans.ttf);
 }
 @font-face {
     font-family: 'Open Sans Condensed';
-    src: url(../opensans-cond.ttf);
+    src: url(/fonts/opensans-cond.ttf);
 }
 
 
@@ -40,9 +40,9 @@ header ul {
 	list-style: none;
 	padding:0px;
 	margin:0px;
-  width:100%;
-  background-color:#576C54;
-  overflow:auto;
+	width:100%;
+	background-color:#576C54;
+	overflow:auto;
 }
 
 header ul li {

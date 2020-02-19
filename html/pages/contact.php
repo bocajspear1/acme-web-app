@@ -8,6 +8,8 @@ if (array_key_exists('comment_text', $_POST) && array_key_exists('comment_name',
 
 	if ($connection->query($query) === TRUE) {
 		echo "Thanks for your comments!<br>";
+	} else {
+		echo "Uh oh, something went wrong...<br>";
 	}
 }
 ?>
