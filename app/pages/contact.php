@@ -2,7 +2,7 @@
 
 
 if (array_key_exists('comment_text', $_POST) && array_key_exists('comment_name', $_POST) ) {
-	$connection = new mysqli("localhost", $CONFIG['database_user'], $CONFIG['database_password'], "hackathon");
+	$connection = new mysqli($_CONFIG->database_host, $_CONFIG->database_user, $_CONFIG->database_password, $_CONFIG->database_name);
 
 	$query = "INSERT INTO comments (name, comment_text) VALUES ('" . $_POST['comment_name'] ."', '" . $_POST['comment_text'] . "')";
 

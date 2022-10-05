@@ -1,4 +1,13 @@
 <?php session_start(); ?>
+
+<?php 
+if (array_key_exists('logout', $_GET)) {
+	$_SESSION['logged_in'] = false;
+	$_SESSION['user'] = '';
+	header("Location: /index.php");
+}
+?>
+
 <html>
 
 <head>
@@ -24,7 +33,7 @@
 include("./config.php");
 
 
-$mysqli = new mysqli("localhost", $CONFIG['database_user'], $CONFIG['database_password'], "hackathon");
+$mysqli = new mysqli($_CONFIG->database_host, $_CONFIG->database_user, $_CONFIG->database_password, $_CONFIG->database_name);
 
 if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
@@ -112,6 +121,7 @@ if (!array_key_exists('logged_in', $_SESSION) || (array_key_exists('logged_in', 
 				<li><a href="admin.php?p=tools">Tools</a></li>
 				<li><a href="admin.php?p=comments">Comments</a></li>
 				<li><a href="admin.php">Admin Main</a></li>
+				<li><a href="admin.php?logout">Logout</a></li>
 				<li><a href="/index.php">Back to Site</a></li>
 			</ul>
 		</section>

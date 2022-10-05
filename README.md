@@ -22,12 +22,12 @@ Create the database `hackathon`, then populate it using the `database.sql` file.
 
 Build using:
 ```
-docker build -t j2h2-vulnapp1 .
+docker build -t acme-webapp .
 ```
 
 Then run using (Maps port 1337 to port 80 on the container):
 ```
-docker run -p 1337:80 --name vulnapp j2h2-vulnapp1
+docker run -p 1337:80 --rm -it --name acme-webapp-test -v`pwd`/app:/var/www/html acme-webapp
 ```
 
 ## Vulnerability List

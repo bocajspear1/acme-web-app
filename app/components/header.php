@@ -1,4 +1,4 @@
-<h1><?php echo $CONFIG['company_name']; ?></h1>
+<h1><?php echo $_CONFIG->company_name; ?></h1>
 <ul>
 	<li><a href="/index.php?p=home.php">Home</a></li>
 	<li><a href="/index.php?p=about.php">About Us</a></li>

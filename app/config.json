@@ -1,0 +1,7 @@
+{
+    "database_host": "",
+    "database_user": "admin",
+    "database_password": "hackathon",
+    "database_name": "hackathon",
+    "company_name": "Acme Inc."
+}

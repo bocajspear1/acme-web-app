@@ -1,5 +1,5 @@
 <?php
-$connection = new mysqli("localhost", $CONFIG['database_user'], $CONFIG['database_password'], "hackathon");
+$connection = new mysqli($_CONFIG->database_host, $_CONFIG->database_user, $_CONFIG->database_password, $_CONFIG->database_name);
 
 $query = "SELECT * FROM comments";
 

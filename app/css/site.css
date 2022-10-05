@@ -34,19 +34,23 @@ header h1 {
   font-family: 'Open Sans Condensed', sans-serif;
   display:block;
   padding-left: 15px;
+  font-size: 3em;
+  margin: 5px;
 }
 
 header ul {
 	list-style: none;
-	padding:0px;
+	padding:10px;
 	margin:0px;
 	width:100%;
-	background-color:#576C54;
+	background-color:#23027E;
 	overflow:auto;
+	box-sizing: border-box;
 }
 
 header ul li {
 	float:left;
+	font-size: 1.3em;
 }
 
 header ul li a {
@@ -101,7 +105,6 @@ footer {
 }
 
 .product .image {
-	width: 15%;
 	display:inline-block;
 	box-sizing: border-box;
 	vertical-align: middle;
@@ -109,7 +112,8 @@ footer {
 }
 
 .product .image img {
-	width: 90%;
+	width: 200px;
+	padding: 40px;
 }
 
 .product .description {

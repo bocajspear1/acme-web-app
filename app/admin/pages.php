@@ -28,7 +28,7 @@ $pages = scandir("./pages");
 echo "<ul>";
 foreach ($pages as $page) {
 	if ($page != "." && $page != "..") {
-		echo "<li><a href='" . $_SERVER['REQUEST_URI'] . "&edit=". $page ."'>" . $page . "</a></li>";
+		echo "<li><a href='" . explode("&edit", $_SERVER['REQUEST_URI'])[0] . "&edit=". $page ."'>" . $page . "</a></li>";
 	}
 }
 echo "</ul>";
